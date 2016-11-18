@@ -13,10 +13,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
-   
     @IBAction func lightFeedbackButton(_ sender: UIButton) {
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.prepare()
@@ -26,14 +24,12 @@ class ViewController: UIViewController {
 
     @IBAction func MediumFeedbackButton(_ sender: UIButton) {
         let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.prepare()
         generator.impactOccurred()
         currentFeedbackStrengthLabel.text = "Medium Feedback Occurred"
     }
     
     @IBAction func heavyFeedbackButton(_ sender: UIButton) {
         let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.prepare()
         generator.impactOccurred()
         currentFeedbackStrengthLabel.text = "Heavy Feedback Occurred"
     }
