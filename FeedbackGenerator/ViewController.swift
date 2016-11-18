@@ -9,17 +9,37 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var currentFeedbackStrengthLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   
+    @IBAction func lightFeedbackButton(_ sender: UIButton) {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.prepare()
+        generator.impactOccurred()
+        currentFeedbackStrengthLabel.text = "Light Feedback Occurred"
     }
 
+    @IBAction func MediumFeedbackButton(_ sender: UIButton) {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.prepare()
+        generator.impactOccurred()
+        currentFeedbackStrengthLabel.text = "Medium Feedback Occurred"
+    }
+    
+    @IBAction func heavyFeedbackButton(_ sender: UIButton) {
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.prepare()
+        generator.impactOccurred()
+        currentFeedbackStrengthLabel.text = "Heavy Feedback Occurred"
+    }
 
+    
+    
+    
 }
 
