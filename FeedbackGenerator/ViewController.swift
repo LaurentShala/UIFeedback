@@ -17,7 +17,6 @@ class ViewController: UIViewController {
 
     @IBAction func lightFeedbackButton(_ sender: UIButton) {
         let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.prepare()
         generator.impactOccurred()
         currentFeedbackStrengthLabel.text = "Light Feedback Occurred"
     }
